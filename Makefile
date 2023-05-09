@@ -17,7 +17,7 @@ all:   ${TARGETS:%=%.build}
 clean: ${TARGETS:%=%.clean}
 
 %.build:
-	${MAKE} -C $* build BUILDDIR=${BUILDDIR}
+	${MAKE} -C $* build BUILDDIR=${BUILDDIR} DEBUG=1
 
 %.clean:
 	${MAKE} -C $* clean BUILDDIR=${BUILDDIR}
